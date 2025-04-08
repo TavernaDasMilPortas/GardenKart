@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: d69745293769a49ffb6955bb4862345c
-AssetOrigin:
-  serializedVersion: 1
-  productId: 150956
-  packageName: Karting Microgame | URP
-  packageVersion: 4.1.0
-  assetPath: Assets/Karting/Tutorials/1 Get started/WT-Play.mov
-  uploadId: 613807
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 3

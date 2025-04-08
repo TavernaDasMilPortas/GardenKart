@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: a231f89d5f90f6b45b04ea196ff35119
-AssetOrigin:
-  serializedVersion: 1
-  productId: 150956
-  packageName: Karting Microgame | URP
-  packageVersion: 4.1.0
-  assetPath: Assets/Karting/Tutorials/5 Build and Publish/WT-Create-Build-Click.mov
-  uploadId: 613807
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 3

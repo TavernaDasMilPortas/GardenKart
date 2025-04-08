@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: 92a75e2aa8c21497994933d0354846e6
-AssetOrigin:
-  serializedVersion: 1
-  productId: 150956
-  packageName: Karting Microgame | URP
-  packageVersion: 4.1.0
-  assetPath: Assets/Karting/Tutorials/2 Editor UI/WT-Pan-Hand-Tool.mov
-  uploadId: 613807
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 3

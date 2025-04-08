@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: a525dc847077d4509b4eedeb0db35ff8
-AssetOrigin:
-  serializedVersion: 1
-  productId: 150956
-  packageName: Karting Microgame | URP
-  packageVersion: 4.1.0
-  assetPath: Assets/Karting/Tutorials/4 Add a Jump/WT-Play.mov
-  uploadId: 613807
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 3

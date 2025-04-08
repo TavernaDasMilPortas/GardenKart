@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.VFX;
+using System.Collections;
 
 namespace KartGame.KartSystems
 {
@@ -412,7 +413,28 @@ namespace KartGame.KartSystems
                     m_LastCollisionNormal = contact.normal;
             }
         }
+        public void ApplyTemporarySlowdown(float slowMultiplier, float duration)
+        {
+            StartCoroutine(TemporarySlowdownCoroutine(slowMultiplier, duration));
+        }
 
+        private IEnumerator TemporarySlowdownCoroutine(float slowMultiplier, float duration)
+        {
+            // Armazena valores originais
+            float originalTopSpeed = m_FinalStats.TopSpeed;
+            float originalAcceleration = m_FinalStats.Acceleration;
+
+            // Aplica o "stun"
+            baseStats.TopSpeed *= slowMultiplier;
+            baseStats.Acceleration = 0f;
+
+            // Espera o tempo do efeito
+            yield return new WaitForSeconds(duration);
+
+            // Restaura os valores originais
+            baseStats.TopSpeed = originalTopSpeed;
+            baseStats.Acceleration = originalAcceleration;
+        }
         void MoveVehicle(bool accelerate, bool brake, float turnInput)
         {
             float accelInput = (accelerate ? 1.0f : 0.0f) - (brake ? 1.0f : 0.0f);
@@ -596,5 +618,6 @@ namespace KartGame.KartSystems
 
             ActivateDriftVFX(IsDrifting && GroundPercent > 0.0f);
         }
+
     }
 }

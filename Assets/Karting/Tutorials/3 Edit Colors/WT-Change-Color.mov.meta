@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: b6cee483e6a2d4b6c90e422699764588
-AssetOrigin:
-  serializedVersion: 1
-  productId: 150956
-  packageName: Karting Microgame | URP
-  packageVersion: 4.1.0
-  assetPath: Assets/Karting/Tutorials/3 Edit Colors/WT-Change-Color.mov
-  uploadId: 613807
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 3

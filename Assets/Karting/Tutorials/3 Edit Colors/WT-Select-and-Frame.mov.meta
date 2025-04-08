@@ -1,12 +1,5 @@
 fileFormatVersion: 2
 guid: e292ffe4f11dd4130a4095e4e7879fe2
-AssetOrigin:
-  serializedVersion: 1
-  productId: 150956
-  packageName: Karting Microgame | URP
-  packageVersion: 4.1.0
-  assetPath: Assets/Karting/Tutorials/3 Edit Colors/WT-Select-and-Frame.mov
-  uploadId: 613807
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 3
