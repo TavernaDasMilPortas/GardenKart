@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using KartGame.KartSystems;
 public class LapTrigger : MonoBehaviour
 {
     public Transform startLine;
@@ -23,29 +23,37 @@ public class LapTrigger : MonoBehaviour
         var placement = other.GetComponentInParent<PlayerPlacement>();
         if (placement != null)
         {
-            Vector3 pos = placement.kart.transform.position;
-
-            Vector3 dirToEnd = (endLine.position - startLine.position).normalized;
-            Vector3 dirFromStart = (pos - startLine.position);
-            Vector3 dirFromEnd = (pos - endLine.position);
-
-            bool passouNaLinha =
-                Vector3.Dot(dirToEnd, dirFromStart) >= 0 &&
-                Vector3.Dot(-dirToEnd, dirFromEnd) >= 0;
-
-            Debug.Log($"[{placement.kart.name}] Verificando passagem pela linha...");
-
-            if (passouNaLinha)
+            if (placement.startRace == true)
             {
-                placement.lap++;
-                Debug.Log($"✅ [{placement.kart.name}] completou a volta {placement.lap}");
-                triggeredKarts.Add(rb);
-                StartCoroutine(RemoveKartAfterDelay(rb));
+                Vector3 pos = placement.kart.transform.position;
+
+                Vector3 dirToEnd = (endLine.position - startLine.position).normalized;
+                Vector3 dirFromStart = (pos - startLine.position);
+                Vector3 dirFromEnd = (pos - endLine.position);
+
+                bool passouNaLinha =
+                    Vector3.Dot(dirToEnd, dirFromStart) >= 0 &&
+                    Vector3.Dot(-dirToEnd, dirFromEnd) >= 0;
+
+                Debug.Log($"[{placement.kart.name}] Verificando passagem pela linha...");
+
+                if (passouNaLinha)
+                {
+                    placement.lap++;
+                    Debug.Log($"✅ [{placement.kart.name}] completou a volta {placement.lap}");
+                    triggeredKarts.Add(rb);
+                    StartCoroutine(RemoveKartAfterDelay(rb));
+                }
+                else
+                {
+                    Debug.Log($"❌ [{placement.kart.name}] não passou corretamente pela linha.");
+                }
             }
             else
             {
-                Debug.Log($"❌ [{placement.kart.name}] não passou corretamente pela linha.");
+                placement.startRace = true;
             }
+
         }
         else
         {

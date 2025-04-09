@@ -29,7 +29,7 @@ public class PlayerPowerUp : MonoBehaviour
                 currentlyPowerUp.PowerUpActive();
                 currentlyPowerUp = null;
             }
-            
+
         }
     }
 }
