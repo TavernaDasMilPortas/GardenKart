@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Karting/Scenes/WinScene.unity
     guid: d6801f2e59f75ee4b919cf5da4e48e3b
+  - enabled: 1
+    path: Assets/Mod/Scenes/MapSelect.unity
+    guid: 892a3467c6b256243878417580c21205
+  - enabled: 1
+    path: Assets/Mod/Scenes/Pistas/Pista 1 - Under the Garden/UndertheGarden.unity
+    guid: 4d2ed0f0bdab48a4d8b02f73fa65d7c2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
